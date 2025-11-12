@@ -1,17 +1,53 @@
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.07;
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
 }
-h1{
-  width: 496px;
-  font-family: "Roboto",sans-serif;
-  color: #FFFFFF;
-  font-size: 56px;
-  letter-spacing: 2px;
-  line-height: 1.07;
-  font-weight: 700;
-  
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2e2f42;
+  background-color: #ffffff;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
 }
 
 .logo {
@@ -21,79 +57,171 @@ h1{
   text-decoration: none;
   font-family: "Raleway", sans-serif;
 }
+
 .logo span {
   color: #4d5ae5;
 }
-.menu {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: #ffffff;
+
+.nav .menu {
+  display: flex;
+  gap: 40px;
 }
+
 .menu-link {
   text-decoration: none;
   color: #2e2f42;
+  font-weight: 500;
 }
-.menu-link:hover {
+
+.menu-link:hover,
+.menu-link:focus {
   color: #404bbf;
 }
+
+.address {
+  font-style: normal;
+}
+
+.address-list {
+  display: flex;
+  gap: 40px;
+}
+
 .address-link {
   text-decoration: none;
-  color: #2e2f42;
+  color: #434455;
 }
 
-.address-link:hover {
+.address-link:hover,
+.address-link:focus {
   color: #404bbf;
 }
-.menu-link:active {
-  text-decoration: underline;
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 120px 0;
 }
-body {
-  font-family: "Roboto", sans-serif;
+
+/* ===== HERO ===== */
+.hero {
+  background-color: #2e2f42;
+  text-align: center;
+  color: #ffffff;
 }
-.buton:hover {
-  background-color: #404bbf;
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  margin-bottom: 48px;
 }
-.buton {
-  cursor: pointer;
+
+.button {
   background-color: #4d5ae5;
-  font-size: 16px;
   color: #ffffff;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
-  text-decoration: none;
-  top: 428px;
-  left: 636px;
+  font-size: 16px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.slider {
-  background-color: #2e2f42;
-  width: 1440px;
-  height: 600px;
-  top: 72px;
+.button:hover {
+  background-color: #404bbf;
+}
+
+/* ===== FEATURES ===== */
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.features-item {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+/* ===== TEAM ===== */
+.team {
+  background-color: #f4f4fd;
   text-align: center;
-  font-weight: 496px;
 }
 
-footer {
-  line-height: 1.4;
-  color: #e7e9fc;
-  background-color: #2e2f42;
-  width: 1440px;
-  height: 312px;
-  top: 2988px;
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
 }
+
+.team-card {
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 32px 16px;
+}
+
+.team-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* ===== PORTFOLIO ===== */
+.portfolio {
+  text-align: center;
+}
+
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.portfolio-card {
+  background-color: #fff;
+  border-bottom: 1px solid #e7e9fc;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.portfolio-card .card-body {
+  padding: 32px 16px;
+}
+
+.portfolio-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #2e2f42;
+  color: #e7e9fc;
+  padding: 100px 0;
+}
+
 .logofooter {
-  top: 3088px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
 }
+
 .logofooter span {
   color: #4d5ae5;
 }
-.resim {
-  background-color: #f4f4fd;
+
+.footer p {
+  margin-top: 16px;
+  width: 264px;
+  line-height: 1.5;
 }
